@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Exercise 4</title>
+	<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+</head>
+	<body>
+		<table>
+			<tr>
+				<th>Name</th>
+				<th>Surname</th>
+			</tr>
+				<tr th:each="student : ${students}">
+    				<td th:text="${student.firstname}"></td>
+    				<td th:text="${student.lastname}"></td>
+			</tr>
+		</table>
+	</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Exercise 5</title>
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>Friends Names</h1>
+	<ul>
+		<li th:each="names : ${getlist}">[[${names}]]</li>
+	</ul>
+	<h1>Add new name to the list</h1>
+	<form method="post" th:action="@{/addname}">
+		<input type="text" id="postname" name="postname"> <input
+			type="submit" value="Add Name">
+	</form>
+</body>
+</html>
